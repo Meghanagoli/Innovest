@@ -103,17 +103,12 @@ export default function DashboardPage() {
     }
   }, [clientMail]);
 
-  const handleLogout = () => {
-    sessionStorage.removeItem('email');
-    localStorage.removeItem('authToken'); 
-    router.push('/'); 
-  };
-  
+
 
   return (
     <div className={`min-h-screen flex`}>
       {/* Sidebar */}
-      <Sidebar email={clientMail} handleLogout={handleLogout} />
+      <Sidebar  />
 
       {/* Main Content */}
       <div className="flex-1 p-10">
